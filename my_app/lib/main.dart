@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/categories_page.dart';
+import 'package:my_app/item_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/ItemPage': (context) => ItemPage(),
+        '/CategoriesPage': (context) => CategoriesPage(),
+      },
       title: 'Flutter Demo',
       theme: ThemeData(
         textTheme: TextTheme(bodyText1: TextStyle(fontFamily: 'Lobster')),
